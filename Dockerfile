@@ -14,6 +14,8 @@ RUN urpmi --auto passwd openssh-server openssh screen zip unzip mc htop bash-com
 
 RUN echo "root:password" | chpasswd
 
+RUN /usr/bin/ssh-keygen -A
+
 EXPOSE 22
 
 CMD /usr/sbin/sshd -D
