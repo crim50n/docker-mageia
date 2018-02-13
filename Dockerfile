@@ -2,6 +2,8 @@ FROM mageia:latest
 
 MAINTAINER Dmitry Svetly  "crims0n@ya.ru"
 
+RUN urpmi.addmedia --distrib --mirrorlist '$MIRRORLIST'
+
 RUN urpmi --auto --auto-update 
 
 RUN urpmi --auto passwd openssh screen zip unzip mc htop bash-completion
