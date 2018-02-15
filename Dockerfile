@@ -15,7 +15,9 @@ RUN (sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ss
 RUN (mkdir /build; \
      cd /build; \
      git clone git://git.mageia.org/software/build-system/draklive/; \
-     git clone git://git.mageia.org/software/build-system/draklive-config/)
+     git clone git://git.mageia.org/software/build-system/draklive-config/; \
+     rm -rf /build/draklive/.git; \
+     rm -rf /build/draklive-config/.git)
 
 EXPOSE 22
 
