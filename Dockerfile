@@ -1,4 +1,4 @@
-FROM mageia:latest
+FROM crims0n:mageia-base:latest
 
 RUN (urpmi.addmedia --distrib --mirrorlist '$MIRRORLIST'; \
      urpmi --auto --auto-update; \
