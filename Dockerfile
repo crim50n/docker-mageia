@@ -19,6 +19,9 @@ RUN (mkdir /build; \
      rm -rf /build/draklive/.git; \
      rm -rf /build/draklive-config/.git)
 
+VOLUME ["/build"]
+VOLUME ["/home/draklive"]
+
 EXPOSE 22
 
 CMD /usr/sbin/sshd -D
